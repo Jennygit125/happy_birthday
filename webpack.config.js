@@ -23,7 +23,11 @@ const config = {
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: 'index.html',
+            template: './src/index.html',
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/page.html',
+            filename: 'page.html',
         }),
 
         new MiniCssExtractPlugin(),
@@ -42,7 +46,7 @@ const config = {
                 use: [stylesHandler, 'css-loader', 'postcss-loader'],
             },
             {
-                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif)$/i,
+                test: /\.(eot|svg|ttf|woff|woff2|png|jpg|gif|mp4)$/i,
                 type: 'asset',
             },
             

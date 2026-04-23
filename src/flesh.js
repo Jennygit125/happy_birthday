@@ -1,3 +1,19 @@
 import './style.css';
+import { wireBirthdayIntro } from './Brain.js';
+import { primeIntroVideo } from './nerve.js';
 
-console.log("Hello This is a Javascript project.");
+const introVideo = document.querySelector('[data-intro-video]');
+const startButton = document.querySelector('[data-start-video]');
+const forceRedirectButton = document.querySelector('[data-force-redirect]');
+
+// Flesh is the boot layer: it primes the video, then hands the interaction
+// rules to Brain so the page stays easy to reason about.
+primeIntroVideo(introVideo);
+wireBirthdayIntro({
+    introVideo,
+    startButton,
+    forceRedirectButton,
+    redirectUrl: './page.html',
+});
+
+console.log('Flesh booted the birthday intro, nerve primed the video, and Brain is handling playback and redirect logic.');

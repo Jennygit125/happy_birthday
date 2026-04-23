@@ -1,6 +1,180 @@
+:root {
+    --primary-color: #112fda;
+    --secondary-color: #ffffff;
+    --gold: #ffd700;
+    --font-family: 'Arial', sans-serif;
+}
 body{
-    background-color: #112fda;
-    font-family: Arial, sans-serif;
+    background-image: linear-gradient( 180.4deg,  rgba(0,6,10,1) 1%, rgba(1,190,237,1) 91.4% );
+    font-family: var(--font-family);
     margin: 0;
+    height: 100vh;
+    overflow: hidden;
     padding: 20px;
+    place-items: center;
+    gap:0;
+    text-align: center;
+    justify-content: center;
+    display: grid;
+}
+video[data-intro-video] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+[data-start-video],
+[data-force-redirect] {
+    position: relative;
+    z-index: 1;
+    justify-self: center;
+    padding: 0.9rem 1.4rem;
+    border: 0;
+    border-radius: 999px;
+    font: inherit;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    cursor: pointer;
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25);
+}
+
+[data-start-video] {
+    align-self: center;
+    background: rgba(255, 215, 0, 0.95);
+    color: #112fda;
+}
+
+[data-force-redirect] {
+    align-self: end;
+    margin-bottom: 2rem;
+    background: rgba(17, 47, 218, 0.92);
+    color: #fff;
+}
+
+[data-start-video]:hover {
+    background: rgba(255, 215, 0, 1);
+    transform: translateY(-1px);
+}
+
+[data-force-redirect]:hover {
+    background: rgba(17, 47, 218, 1);
+    transform: translateY(-1px);
+}
+
+[data-start-video]:focus-visible,
+[data-force-redirect]:focus-visible {
+    outline: 3px solid rgba(255, 215, 0, 0.9);
+    outline-offset: 3px;
+}
+.container{
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.container h1 {
+    color: var(--gold);
+    margin-bottom: 10px;
+    font-family: "Rye", serif;
+    font-weight: 500;
+    font-size: 4rem;
+    animation: myAnim 2s ease 0s 1 normal forwards;
+}
+.container h2 {
+    color: var(--primary-color);
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    font-family: 'Times New Roman', Times, serif;
+    animation: myAni 2s ease 0s 1 normal forwards;
+}
+
+  @keyframes myAnim {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(-250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(-65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(-28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(-8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+}
+@keyframes myAni {
+	0% {
+		animation-timing-function: ease-in;
+		opacity: 0;
+		transform: translateY(250px);
+	}
+
+	38% {
+		animation-timing-function: ease-out;
+		opacity: 1;
+		transform: translateY(0);
+	}
+
+	55% {
+		animation-timing-function: ease-in;
+		transform: translateY(65px);
+	}
+
+	72% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	81% {
+		animation-timing-function: ease-in;
+		transform: translateY(28px);
+	}
+
+	90% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
+
+	95% {
+		animation-timing-function: ease-in;
+		transform: translateY(8px);
+	}
+
+	100% {
+		animation-timing-function: ease-out;
+		transform: translateY(0);
+	}
 }
