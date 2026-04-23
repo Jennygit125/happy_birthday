@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <title>Happy Birthday video</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="dist/main.css">
+        <script defer src="dist/main.js"></script>
+    </head>
+    <body>
+        <video
+            data-intro-video
+            playsinline
+            preload="auto">
+            <source src="./src/Happy_birthday.mp4" type="video/mp4">
+            Why not play? Obviously your browser does not support the video tag.
+        </video>
+        <button type="button" data-start-video>
+            Start
+        </button>
+        <button type="button" data-force-redirect hidden>
+            Continue to birthday page
+        </button>
+    </body>
+</html>
