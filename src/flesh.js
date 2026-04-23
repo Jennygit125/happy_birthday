@@ -6,8 +6,8 @@ const introVideo = document.querySelector('[data-intro-video]');
 const startButton = document.querySelector('[data-start-video]');
 const forceRedirectButton = document.querySelector('[data-force-redirect]');
 
-// Flesh is the boot layer: it primes the video, then hands the interaction
-// rules to Brain so the page stays easy to reason about.
+// Flesh is flesh: it primes the video, then hands the interaction things you see
+// rules to Brain so the page thinks .
 primeIntroVideo(introVideo);
 wireBirthdayIntro({
     introVideo,
