@@ -6,8 +6,8 @@ const introVideo = document.querySelector('[data-intro-video]');
 const startButton = document.querySelector('[data-start-video]');
 const forceRedirectButton = document.querySelector('[data-force-redirect]');
 
-// Flesh is flesh: it primes the video, then hands the interaction things you see
-// rules to Brain so the page thinks .
+// Flesh is flesh: it primes the video, then hands the interaction basically things you see
+// logic to Brain so the page thinks .
 primeIntroVideo(introVideo);
 wireBirthdayIntro({
     introVideo,
